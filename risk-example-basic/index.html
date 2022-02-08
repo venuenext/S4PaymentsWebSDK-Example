@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html style="margin: 0; padding: 0; box-sizing: 'border-box'; border: 'none'; background-color: 'transparent';">
+<head>
+<script src="./S4Payments.min.js?v=2.1.3"></script>
+</head>
+<body style="position: absolute; top: 0; left: 0; height: 100%; width: 100%; margin: 0; padding: 0;">
+<script>
+  const config = {
+    riskId: '',
+    enabledServices: ['risk'],
+    appId: '',
+    events: (payload) => {
+      if (payload.event === 'RISK_ASSESSMENT_READY') {
+        console.log(payload)
+      }
+    }
+  }
+  
+  S4Payments.sdk.initialize(config)
+</script>
+</body>
+</html>

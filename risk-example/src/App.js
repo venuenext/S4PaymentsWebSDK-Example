@@ -9,9 +9,9 @@ function App() {
 
   useEffect(() => {
     const config = {
-      riskId: '100450',
+      riskId: '',
       enabledServices: ['risk'],
-      appId: 'bee23d1a-6e6f-488f-af0b-8758b71f05ae',
+      appId: '',
       events: (payload) => {
         if (payload.event === 'RISK_ASSESSMENT_READY') {
           console.log(payload)

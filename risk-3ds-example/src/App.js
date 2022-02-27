@@ -40,7 +40,10 @@ function App() {
 
           // After you receive this event, you can continue with evaluting the payment on your server.
 
-        } 
+        } else if (payload.event === 'S4PAYMENTS_CLOSED') {
+          // If you are integrating 3DS, and your payment screen just hangs for a while, ~10 minutes,
+          // the SDK will shut down 3DS and you will be required to re-initialize the SDK.
+        }
       }
     }
 
